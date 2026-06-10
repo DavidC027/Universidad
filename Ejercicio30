@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int tarifaHora = 7900;
+
+        Console.Write("Ingrese las horas trabajadas: ");
+        int horas = int.Parse(Console.ReadLine());
+
+        int costoTotal = horas * tarifaHora;
+
+        Console.WriteLine("\nRESUMEN");
+        Console.WriteLine("Horas trabajadas: " + horas);
+        Console.WriteLine("Tarifa por hora: $" + tarifaHora);
+        Console.WriteLine("Costo total: $" + costoTotal);
+    }
+}
