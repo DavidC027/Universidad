@@ -1,0 +1,15 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int sum1 = 100 + 30;
+        double sum2 = sum1 + 534.72;
+        double sum3 = sum1 + sum2;
+
+        Console.WriteLine(sum1);
+        Console.WriteLine(sum2);
+        Console.WriteLine(sum3);
+    }
+}
