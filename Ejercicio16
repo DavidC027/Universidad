@@ -1,0 +1,18 @@
+using System;
+
+class Person
+{
+    public string Name { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person myObj = new Person();
+
+        myObj.Name = "Liam";
+
+        Console.WriteLine(myObj.Name);
+    }
+}
