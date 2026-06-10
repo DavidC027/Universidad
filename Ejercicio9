@@ -1,0 +1,10 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double myNum = 19.99;
+        Console.WriteLine(myNum);
+    }
+}
