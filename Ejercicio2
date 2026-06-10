@@ -1,0 +1,51 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Digite su nombre: ");
+        string nombre = Console.ReadLine();
+
+        while (string.IsNullOrWhiteSpace(nombre))
+        {
+            Console.WriteLine("El nombre no puede estar vacío.");
+            nombre = Console.ReadLine();
+        }
+
+        Console.Write("Digite su edad: ");
+        int edad;
+
+        while (!int.TryParse(Console.ReadLine(), out edad))
+        {
+            Console.WriteLine("La edad debe ser un número.");
+        }
+
+        Console.Write("Digite su dirección: ");
+        string direccion = Console.ReadLine();
+
+        Console.Write("Digite su Gmail: ");
+        string gmail = Console.ReadLine();
+
+        Console.WriteLine("\nDATOS");
+        Console.WriteLine($"Nombre: {nombre}");
+        Console.WriteLine($"Edad: {edad}");
+        Console.WriteLine($"Dirección: {direccion}");
+        Console.WriteLine($"Gmail: {gmail}");
+
+        double num2 = Math.Pow(2 + 4, 2);
+        double num4 = Math.Pow(4 * 8, 3);
+
+        Console.WriteLine($"Resultado división: {num2 / num4}");
+
+        Console.WriteLine($"Máximo: {Math.Max(5, 10)}");
+        Console.WriteLine($"Mínimo: {Math.Min(5, 10)}");
+        Console.WriteLine($"Raíz cuadrada: {Math.Sqrt(64)}");
+        Console.WriteLine($"Valor absoluto: {Math.Abs(-4.5)}");
+        Console.WriteLine($"Redondeo: {Math.Round(0.0010986328125)}");
+
+        Console.WriteLine($"Longitud dirección: {direccion.Length}");
+        Console.WriteLine($"Nombre en mayúsculas: {nombre.ToUpper()}");
+        Console.WriteLine($"Gmail en minúsculas: {gmail.ToLower()}");
+    }
+}
