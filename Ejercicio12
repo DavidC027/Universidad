@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int myInt = 12;
+        double myDouble = 3.24;
+        bool myBool = true;
+
+        Console.WriteLine(Convert.ToString(myInt));
+        Console.WriteLine(Convert.ToDouble(myInt));
+        Console.WriteLine(Convert.ToInt32(myDouble));
+        Console.WriteLine(Convert.ToString(myBool));
+    }
+}
