@@ -1,0 +1,12 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int myNum = 15;
+        myNum = 20;
+
+        Console.WriteLine(myNum);
+    }
+}
