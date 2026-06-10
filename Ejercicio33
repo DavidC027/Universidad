@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Destino: ");
+        string destino = Console.ReadLine();
+
+        Console.Write("Número de pasajeros: ");
+        int pasajeros = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Costo por persona: ");
+        double costoPorPersona = Convert.ToDouble(Console.ReadLine());
+
+        double presupuesto = pasajeros * costoPorPersona;
+
+        if (pasajeros > 5 && destino.ToLower() == "barcelona")
+        {
+            presupuesto -= presupuesto * 0.10;
+        }
+
+        Console.WriteLine($"Presupuesto total: ${presupuesto}");
+    }
+}
