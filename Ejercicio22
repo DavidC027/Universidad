@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingresa tu nombre: ");
+        string nombre = Console.ReadLine();
+
+        Console.Write("Ingresa tu edad: ");
+        int edad = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Tu nombre es: " + nombre +
+                          " y tienes " + edad + " años.");
+    }
+}
