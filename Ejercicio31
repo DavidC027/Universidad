@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string[] productos = { "Arroz", "Leche", "Pan" };
+        int[] stock = { 30, 60, 20 };
+        double[] precios = { 6000, 5000, 2000 };
+
+        Console.WriteLine("=== INVENTARIO ===");
+
+        for (int i = 0; i < productos.Length; i++)
+        {
+            Console.WriteLine($"{productos[i]} - Stock: {stock[i]} - Precio: ${precios[i]}");
+        }
+
+        Console.Write("\nBuscar producto: ");
+        string productoBuscado = Console.ReadLine();
+
+        int indice = Array.IndexOf(productos, productoBuscado);
+
+        if (indice == -1)
+        {
+            Console.WriteLine("Producto no encontrado.");
+            return;
+        }
+
+        Console.Write("Cantidad vendida: ");
+        int cantidad = int.Parse(Console.ReadLine());
+
+        if (cantidad > stock[indice])
+        {
+            Console.WriteLine("No hay suficiente stock.");
+            return;
+        }
+
+        double subtotal = cantidad * precios[indice];
+        stock[indice] -= cantidad;
+
+        Console.WriteLine("\n=== FACTURA ===");
+        Console.WriteLine($"Producto: {productos[indice]}");
+        Console.WriteLine($"Cantidad: {cantidad}");
+        Console.WriteLine($"Precio Unitario: ${precios[indice]}");
+        Console.WriteLine($"Subtotal: ${subtotal}");
+        Console.WriteLine($"Stock restante: {stock[indice]}");
+    }
+}
