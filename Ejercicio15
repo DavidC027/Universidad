@@ -1,0 +1,20 @@
+using System;
+
+class Car
+{
+    private string model = "Mustang";
+
+    public void MostrarModelo()
+    {
+        Console.WriteLine(model);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Car myObj = new Car();
+        myObj.MostrarModelo();
+    }
+}
