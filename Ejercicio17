@@ -1,0 +1,21 @@
+using System;
+
+class Ciudadano
+{
+    public string DNI { get; set; }
+
+    public Ciudadano(string dni)
+    {
+        DNI = dni;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Ciudadano c = new Ciudadano("1073232883");
+
+        Console.WriteLine("El DNI es: " + c.DNI);
+    }
+}
